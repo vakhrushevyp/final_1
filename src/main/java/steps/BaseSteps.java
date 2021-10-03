@@ -3,10 +3,7 @@ package steps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.qameta.allure.Attachment;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import util.TestProperties;
@@ -48,11 +45,12 @@ public class BaseSteps {
         driver.manage().window().maximize();
         driver.get(baseUrl);
     }
-  /*  public void fillField(By locator, String value) {
-        driver.findElement(locator).clear();
-        driver.findElement(locator).sendKeys(value);
+    public void fillField(WebElement element, String value) {
+        element.click();
+        element.clear();
+        element.sendKeys(value);
     }
-*/
+
 
     @After
     public void afterTest(){

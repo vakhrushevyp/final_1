@@ -7,6 +7,9 @@ public class ScenarioSteps {
     MainSteps mainSteps = new MainSteps();
     MarketSteps marketSteps = new MarketSteps();
     ElectronicsSteps electronicsSteps = new ElectronicsSteps();
+    TVSteps tvSteps = new TVSteps();
+    FilterSteps filterSteps = new FilterSteps();
+
 
 
     @When("^выбран пункт меню \"(.*)\"$")
@@ -24,6 +27,15 @@ public class ScenarioSteps {
         electronicsSteps.stepSelectElectronicsMenu(menuItem);
     }
 
+    @When("^выполнено нажание на кнопку Все фильтры$")
+    public void stepSelectTvFilterBtn () { tvSteps.stepSelectTvFilterBtn();
 
+    }
+
+    @When("^ввод цены поиска От значением: \"(.*)\"$")
+    public void stepSetFilterSumOt (String value) {
+        filterSteps.stepSetFilterSumOt(value);
+
+    }
 
 }
