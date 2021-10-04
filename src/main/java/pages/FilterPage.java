@@ -21,6 +21,18 @@ public class FilterPage {
 
     }
 
+    @FindBy(xpath = "//div[@data-filter-id='7893318']")
+    WebElement filterMenuManufacturer;
+
+    public void setFilterMenuManufacturer (String checkbox)  {
+        filterMenuManufacturer.findElement(By.xpath(".//div//div[contains(text(),'" + checkbox + "')]")).click();
+    }
+
+    public void pushFilterBtn (String text) {
+        filterMenu.findElement(By.xpath(".//a[contains(text(),'" + text + "')]")).click();
+    }
+
+
 
 }
 

@@ -11,4 +11,16 @@ public class FilterSteps {
 
     }
 
+    @Step ("выбран производитель:{0}")
+    public void stepSelectFilterManufacturer (String checkbox) {
+        new FilterPage().setFilterMenuManufacturer(checkbox);
+    }
+
+
+    @Step ("Нажата кнопка:{0}")
+    public void stepPushFilterBtn (String text) {
+        new FilterPage().pushFilterBtn(text);
+    }
+
+
 }

@@ -11,7 +11,6 @@ public class ScenarioSteps {
     FilterSteps filterSteps = new FilterSteps();
 
 
-
     @When("^выбран пункт меню \"(.*)\"$")
     public void stepSelectMainMenu(String menuItem) {
         mainSteps.stepSelectMainMenu(menuItem);
@@ -28,14 +27,23 @@ public class ScenarioSteps {
     }
 
     @When("^выполнено нажание на кнопку Все фильтры$")
-    public void stepSelectTvFilterBtn () { tvSteps.stepSelectTvFilterBtn();
-
+    public void stepSelectTvFilterBtn() {
+        tvSteps.stepSelectTvFilterBtn();
     }
 
     @When("^ввод цены поиска От значением: \"(.*)\"$")
-    public void stepSetFilterSumOt (String value) {
+    public void stepSetFilterSumOt(String value) {
         filterSteps.stepSetFilterSumOt(value);
+    }
 
+    @When("^выбран производитель телевизора: \"(.*)\"$")
+    public void stepSelectFilterManufacturer (String checkbox) {
+        filterSteps.stepSelectFilterManufacturer(checkbox);
+    }
+
+    @When("^нажатие кнопки: \"(.*)\"$")
+    public void stepPushFilterBtn (String text) {
+        filterSteps.stepPushFilterBtn(text);
     }
 
 }
