@@ -9,6 +9,7 @@ public class ScenarioSteps {
     ElectronicsSteps electronicsSteps = new ElectronicsSteps();
     TVSteps tvSteps = new TVSteps();
     FilterSteps filterSteps = new FilterSteps();
+    ResultSteps resultSteps = new ResultSteps();
 
 
     @When("^выбран пункт меню \"(.*)\"$")
@@ -44,6 +45,11 @@ public class ScenarioSteps {
     @When("^нажатие кнопки: \"(.*)\"$")
     public void stepPushFilterBtn (String text) {
         filterSteps.stepPushFilterBtn(text);
+    }
+
+    @When("^проверяем что элементов на странице: \"(.*)\"$")
+    public void stepCheckCountSearchResult (long elementsCount) {
+        resultSteps.CheckCountSearchResult(elementsCount);
     }
 
 }
