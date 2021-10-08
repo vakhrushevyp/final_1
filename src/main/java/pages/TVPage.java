@@ -10,8 +10,8 @@ public class TVPage {
     @FindBy(xpath = "//span[contains(text(),'Все фильтры')]")
     public WebElement tvFilterBtn;
 
-    public TVPage () {
-        PageFactory.initElements(BaseSteps.getDriver(),this);
+    public TVPage() {
+        PageFactory.initElements(BaseSteps.getDriver(), this);
     }
 
 }

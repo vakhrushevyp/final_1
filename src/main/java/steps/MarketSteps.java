@@ -5,8 +5,8 @@ import pages.MarketMainPage;
 
 public class MarketSteps {
 
-    @Step ("выбран элемент {0}")
-    public void stepSelectMarketMainMenu (String menuItem) {
+    @Step("выбран элемент {0}")
+    public void stepSelectMarketMainMenu(String menuItem) {
         new MarketMainPage().selectMarketMainMenu(menuItem);
     }
 }

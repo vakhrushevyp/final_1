@@ -13,16 +13,13 @@ public class ElectronicsPage {
     WebElement electronicsMenu;
 
 
-    public ElectronicsPage () {
-        PageFactory.initElements(BaseSteps.getDriver(),this);
+    public ElectronicsPage() {
+        PageFactory.initElements(BaseSteps.getDriver(), this);
     }
 
-    public void selectElectronicsMenu (String menuItem) {
+    public void selectElectronicsMenu(String menuItem) {
         electronicsMenu.findElement(By.xpath(".//a[(text()='" + menuItem + "')]")).click();
     }
-
-
-
 
 
 }

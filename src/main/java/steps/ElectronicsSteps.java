@@ -6,8 +6,8 @@ import pages.ElectronicsPage;
 public class ElectronicsSteps {
 
     @Step("выбран раздел электроники {0}")
-    public void stepSelectElectronicsMenu (String menuItem) {
-       new ElectronicsPage().selectElectronicsMenu(menuItem);
+    public void stepSelectElectronicsMenu(String menuItem) {
+        new ElectronicsPage().selectElectronicsMenu(menuItem);
 
     }
 

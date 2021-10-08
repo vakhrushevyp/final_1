@@ -43,7 +43,7 @@ public class ScenarioSteps {
     }
 
 
-    @When("^выбран производитель телевизора: \"(.*)\"$")
+    @When("^выбран производитель: \"(.*)\"$")
     public void stepSelectFilterManufacturer(String checkbox) {
         filterSteps.stepSelectFilterManufacturer(checkbox);
     }

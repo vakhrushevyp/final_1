@@ -16,17 +16,17 @@ public class BaseSteps {
     protected static WebDriver driver;
     protected static String baseUrl;
     Properties properties = TestProperties.getInstance().getProperties();
-    public  JavascriptExecutor js = ((JavascriptExecutor) driver);
+    public JavascriptExecutor js = ((JavascriptExecutor) driver);
+
     public static WebDriver getDriver() {
         return driver;
     }
 
 
-
     @Before
     public void setUp() {
 
-        switch (properties.getProperty("browser")){
+        switch (properties.getProperty("browser")) {
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", properties.getProperty("webdriver.gecko.driver"));
                 driver = new FirefoxDriver();
@@ -46,9 +46,8 @@ public class BaseSteps {
         driver.get(baseUrl);
 
 
-
-
     }
+
     public void fillField(WebElement element, String value) {
         element.click();
         element.clear();
@@ -57,7 +56,7 @@ public class BaseSteps {
 
 
     @After
-    public void afterTest(){
+    public void afterTest() {
         driver.quit();
     }
 

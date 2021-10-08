@@ -11,7 +11,7 @@ public class MainPage {
     @FindBy(xpath = "//div[@class='services-new__content']")
     WebElement mainMenu;
 
-    public MainPage () {
+    public MainPage() {
         PageFactory.initElements(BaseSteps.getDriver(), this);
     }
 

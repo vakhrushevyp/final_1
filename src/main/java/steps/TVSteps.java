@@ -7,7 +7,7 @@ import pages.TVPage;
 public class TVSteps {
 
     @Step("выбран элемент Все фильтры")
-    public void stepSelectTvFilterBtn () {
+    public void stepSelectTvFilterBtn() {
         new TVPage().tvFilterBtn.click();
     }
 
