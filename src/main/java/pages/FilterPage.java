@@ -1,6 +1,8 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +14,7 @@ public class FilterPage {
     WebElement filterMenu;
 
 
+
     public FilterPage() {
         PageFactory.initElements(BaseSteps.getDriver(), this);
     }
@@ -21,12 +24,21 @@ public class FilterPage {
 
     }
 
-    @FindBy(xpath = "//div[@data-filter-id='7893318']")
+    @FindBy(xpath = "//div[@data-filter-id='7893318']//div[@data-tid='492efb0a']")
     WebElement filterMenuManufacturer;
 
-    public void setFilterMenuManufacturer (String checkbox)  {
-        filterMenuManufacturer.findElement(By.xpath(".//div//div[contains(text(),'" + checkbox + "')]")).click();
+    public void Scroll () {
+        ((JavascriptExecutor)BaseSteps.getDriver()).executeScript("arguments[0].scrollIntoView();"
+                ,filterMenuManufacturer);
     }
+
+
+    public void setFilterMenuManufacturer (String checkbox)  {
+
+        filterMenuManufacturer.findElement(By.xpath("//div//label//div[contains(text(),'" + checkbox + "')]")).click();
+    }
+
+
 
     public void pushFilterBtn (String text) {
         filterMenu.findElement(By.xpath(".//a[contains(text(),'" + text + "')]")).click();

@@ -37,19 +37,46 @@ public class ScenarioSteps {
         filterSteps.stepSetFilterSumOt(value);
     }
 
+    @When("^прокрутили страницу$")
+    public void stepScroll() {
+        filterSteps.stepScroll();
+    }
+
+
     @When("^выбран производитель телевизора: \"(.*)\"$")
-    public void stepSelectFilterManufacturer (String checkbox) {
+    public void stepSelectFilterManufacturer(String checkbox) {
         filterSteps.stepSelectFilterManufacturer(checkbox);
     }
 
     @When("^нажатие кнопки: \"(.*)\"$")
-    public void stepPushFilterBtn (String text) {
+    public void stepPushFilterBtn(String text) {
         filterSteps.stepPushFilterBtn(text);
     }
 
     @When("^проверяем что элементов на странице: \"(.*)\"$")
-    public void stepCheckCountSearchResult (long elementsCount) {
+    public void stepCheckCountSearchResult(long elementsCount) {
         resultSteps.CheckCountSearchResult(elementsCount);
     }
+
+    @When("^первый элемент на странице:$")
+    public void stepFirstElementSearchResult() {
+        resultSteps.FirstElementSearchResult();
+    }
+
+    @When("^в поле поиска вводим значение первого элемента в списке$")
+    public void stepInputSearchFiled() {
+        resultSteps.InputSearchFiled();
+    }
+
+    @When("^нажимаем кнопку Найти$")
+    public void stepFindSearchFiled() {
+        resultSteps.FindSearchFiled();
+    }
+
+    @When("^проверяем соответствие наименования товара$")
+    public void stepFirstElementSearchResultTwo() {
+        resultSteps.FirstElementSearchResultTwo();
+    }
+
 
 }

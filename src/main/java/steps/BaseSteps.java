@@ -16,7 +16,7 @@ public class BaseSteps {
     protected static WebDriver driver;
     protected static String baseUrl;
     Properties properties = TestProperties.getInstance().getProperties();
-
+    public  JavascriptExecutor js = ((JavascriptExecutor) driver);
     public static WebDriver getDriver() {
         return driver;
     }
@@ -44,6 +44,10 @@ public class BaseSteps {
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseUrl);
+
+
+
+
     }
     public void fillField(WebElement element, String value) {
         element.click();

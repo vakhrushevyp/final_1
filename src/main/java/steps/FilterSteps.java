@@ -11,6 +11,11 @@ public class FilterSteps {
 
     }
 
+    @Step ("прокручиваем страницу")
+    public void stepScroll () {
+        new FilterPage().Scroll();
+    }
+
     @Step ("выбран производитель:{0}")
     public void stepSelectFilterManufacturer (String checkbox) {
         new FilterPage().setFilterMenuManufacturer(checkbox);
